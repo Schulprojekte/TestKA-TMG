@@ -16,7 +16,19 @@
             <p>Gelb</p>
         </div>
         <div class="layout rechts">
-            <p>Weiß</p>
+            <form action="index.php" method="POST">
+                <label for="name">Name:</label>
+                <input name="name" type="text">
+                <br>
+                <label for="klasse">Klasse:</label>
+                <input name="klasse" type="text">
+                <br>
+                <label for="beschreibung">Beschreibung:</label>
+                <br>
+                <textarea name="beschreibung" rows="4" cols="50">Beschreibung</textarea>
+                <br>
+                <input type="submit">
+            </form>
         </div>
     </div>
 </body>
