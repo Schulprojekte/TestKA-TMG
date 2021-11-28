@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+Name: David Hülsberg
+Klasse: 19IT1
+Datum: 29.11.2021
+Zweck: Eintragung der Daten in die Datenbank
+-->
 <?php
     include("zugriff.inc");
     if(isset($_POST['name']) && isset($_POST['klasse']) && isset($_POST['beschreibung'])) {
@@ -7,7 +13,7 @@
         $beschreibung = $_POST['beschreibung'];
 
         if($name != NULL && $klasse != NULL && $beschreibung != NULL) {
-            $connection = mysqli_connect($host, $user, $password, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
+            $connection = mysqli_connect($host, $user, null, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
             mysqli_query($connection, "INSERT INTO daten VALUES(NULL, '$name', '$klasse', '$beschreibung');") or die("Daten konnten nicht eigetragen werden");
             mysqli_close($connection);
         } else {
