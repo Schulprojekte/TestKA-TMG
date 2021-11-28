@@ -15,7 +15,7 @@ Zweck: Abfrage der Daten aus der Datenbank
 <body>
     <?php
         include('zugriff.inc');
-        $connection = mysqli_connect($host, $user, $password, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
+        $connection = mysqli_connect($host, $user, null, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
         $query = "SELECT name, klasse, beschreibung FROM daten ORDER BY name desc;";
         echo "<table border='1'>";
         echo "<tr><th>Name:</th><th>Klasse:</th><th>Beschreibung:</th>";

@@ -13,7 +13,7 @@ Zweck: Eintragung der Daten in die Datenbank
         $beschreibung = $_POST['beschreibung'];
 
         if($name != NULL && $klasse != NULL && $beschreibung != NULL) {
-            $connection = mysqli_connect($host, $user, $password, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
+            $connection = mysqli_connect($host, $user, null, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
             mysqli_query($connection, "INSERT INTO daten VALUES(NULL, '$name', '$klasse', '$beschreibung');") or die("Daten konnten nicht eigetragen werden");
             mysqli_close($connection);
         } else {

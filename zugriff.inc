@@ -8,6 +8,5 @@ Zweck: Anmeldedaten für die Datenbank
 
 $host="localhost";
 $user="root";
-$password="";
 $database="testka";
 ?>
