@@ -1,4 +1,22 @@
 <!DOCTYPE html>
+<?php
+    include("zugriff.inc");
+    if(isset($_POST['name']) && isset($_POST['klasse']) && isset($_POST['beschreibung'])) {
+        $name = $_POST['name'];
+        $klasse = $_POST['klasse'];
+        $beschreibung = $_POST['beschreibung'];
+
+        if($name != NULL && $klasse != NULL && $beschreibung != NULL) {
+            $connection = mysqli_connect($host, $user, $password, $database) or die("Verbindung zum Server konnte nicht hergestellt werden!");
+            mysqli_query($connection, "INSERT INTO daten VALUES(NULL, '$name', '$klasse', '$beschreibung');") or die("Daten konnten nicht eigetragen werden");
+            mysqli_close($connection);
+        } else {
+            echo "<p>Bitte geben Sie alle Daten an!</p>";
+        }
+    } else {
+        //nichts tun
+    }
+?>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
