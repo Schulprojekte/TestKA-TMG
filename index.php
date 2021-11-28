@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+Name: David Hülsberg
+Klasse: 19IT1
+Datum: 29.11.2021
+Zweck: Eintragung der Daten in die Datenbank
+-->
 <?php
     include("zugriff.inc");
     if(isset($_POST['name']) && isset($_POST['klasse']) && isset($_POST['beschreibung'])) {

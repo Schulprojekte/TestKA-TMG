@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+Name: David Hülsberg
+Klasse: 19IT1
+Datum: 29.11.2021
+Zweck: Abfrage der Daten aus der Datenbank
+-->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
