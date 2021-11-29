@@ -54,10 +54,5 @@ ALTER TABLE `daten`
 --
 ALTER TABLE `daten`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- Datenbank: `userdata`
---
-CREATE DATABASE IF NOT EXISTS `userdata` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `userdata`;
-
+  
 -- --------------------------------------------------------
